@@ -1,0 +1,9 @@
+version: "3"
+services:
+  recognition:
+    volumes:
+      # - ./recognition:/app:cached
+      - prod-shared-data:/data
+
+volumes:
+  prod-shared-data:

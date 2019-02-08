@@ -1,0 +1,10 @@
+{
+    "apps": [{
+        "name": "recognition",
+        "script": "/bin/bash",
+        "args": ["-c", "python recognition.py"],
+        "watch": true,
+        "ignore_watch": ["models", "venv", "test"],
+        "env": {}
+    }]
+}

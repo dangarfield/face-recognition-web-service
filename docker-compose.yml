@@ -1,0 +1,19 @@
+version: "3"
+services:
+  recognition:
+    container_name: prod_face-recognition-web-service
+    image: registry.gitlab.com/dangarfield/face-recognition-web-service:v1.0.0
+    # volumes:
+      # - ./recognition:/app:cached
+      # - shared-data:/data
+    working_dir: /app
+    command: pm2-runtime pm2-recognition.json
+    networks:
+      - recognition-network
+    restart: always
+
+networks:
+  recognition-network:
+
+# volumes:
+#   shared-data:

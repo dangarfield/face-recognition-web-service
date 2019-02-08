@@ -1,0 +1,10 @@
+version: "3"
+services:
+  recognition:
+    container_name: local_face-recognition-web-service
+    build: ./recognition
+    volumes:
+      - ./recognition:/app:cached
+      - ./data:/data:cached
+    ports:
+      - 3002:3002
